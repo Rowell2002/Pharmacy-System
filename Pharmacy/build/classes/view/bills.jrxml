@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="184e7fc3-14ab-44b8-a572-7c8c0316fdd9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="10"/>
+	<queryString language="SQL">
+		<![CDATA[select * from bill;]]>
+	</queryString>
+	<field name="bill_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="medicine" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="Sum" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{total}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="364" y="0" width="80" height="13" uuid="dfde63f3-06f2-45ce-acf4-1aacbc692895"/>
+				<text><![CDATA[Hemas Hospital, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="13" width="189" height="14" uuid="3c8c9e73-e58b-4ed2-bc45-eff5ca1e43d4"/>
+				<text><![CDATA[389, Negombo Road, Wattala, SriLanka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="40" width="127" height="17" uuid="934656ac-466d-48ec-a881-51797f4fdbd4"/>
+				<text><![CDATA[www.hemashospitals.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="132" height="57" uuid="c45d9207-0488-4e2e-8ee6-574d1cfa3292"/>
+				<textElement textAlignment="Center">
+					<font fontName="Academy Engraved LET" size="24"/>
+				</textElement>
+				<text><![CDATA[HEMAS HOSPITAL]]></text>
+			</staticText>
+			<image>
+				<reportElement x="221" y="10" width="68" height="68" uuid="0a236939-ab67-4171-93d5-27354d8c7256"/>
+				<imageExpression><![CDATA["/Users/chethanarowell/Downloads/Hemas-Logos-Depts.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="364" y="27" width="151" height="13" uuid="ad46efd2-b9b5-429b-a5f7-c32921331f51"/>
+				<text><![CDATA[0117 888 888 / 0117 888 765]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="78" width="555" height="1" uuid="6a1f4d70-1987-4888-ac38-8df4d67aa32f"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="279" y="0" width="85" height="13" uuid="56c1815c-37ea-461f-9005-7fe1c98e6764"/>
+				<text><![CDATA[Patient Name-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="27" width="120" height="13" uuid="efce4ca1-ba6e-4ed7-99d3-5221872631a6"/>
+				<text><![CDATA[Doctor-DR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="75" height="14" uuid="277aeeb4-254c-4142-9e78-cfbbb41c86b1"/>
+				<text><![CDATA[TOKEN NO - 12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="120" height="13" uuid="e6d3f4ef-4d52-46d9-9213-9e890ebd51cd"/>
+				<text><![CDATA[Mobile NO-0760946455]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="13" width="120" height="13" uuid="fc3dea77-fd5f-4d4b-9020-58f8249830f5"/>
+				<text><![CDATA[Cashier Name-Mileesha]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="54" width="555" height="1" uuid="cacec941-ff1e-427f-ba0b-9b88e6ec2bd6"/>
+			</line>
+			<textField>
+				<reportElement x="353" y="0" width="100" height="20" uuid="1456be6d-4911-4a44-8f9d-41b487b12bd0"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="106" y="2" width="100" height="20" uuid="1f134dcf-02f7-4834-906c-2ffcf25ea9e1"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="2" width="100" height="20" uuid="ba9bc90b-6814-4ec8-9326-fed3c0cbc238"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="0" width="100" height="20" uuid="eb2d8801-3f93-418f-b32c-7d026bab9146"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="38" height="20" uuid="1a6d0be1-5ef3-4124-ab41-81d024063554"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="469" y="2" width="62" height="20" uuid="b31f59fc-2ea6-4d5c-b9b4-63c3d5fbc2dc"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Total ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="55" height="20" uuid="767cc607-2545-422e-b5e1-adc2c241991b"/>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="0" width="58" height="20" uuid="c7530da5-b54e-44af-9e27-76c84d3ad350"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="364" y="0" width="59" height="20" uuid="7f48e938-ef6d-4c42-ac08-ef05c1aeafcb"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="0" width="62" height="20" uuid="58b2fa5b-3e9c-4b7d-818b-9e5a4382e5a4"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="20" y="32" width="511" height="1" uuid="673498b5-8f5a-4ebe-b7ce-c94020f08487"/>
+			</line>
+			<textField>
+				<reportElement x="106" y="0" width="100" height="20" uuid="0ea9f7bf-0919-4075-be36-abe983c9a114"/>
+				<textFieldExpression><![CDATA[$F{medicine}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="7" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement x="132" y="40" width="289" height="27" uuid="b7c32e1f-17ad-42b8-afad-f0a47cfc65e8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Medication purchased are not exchangable not refundable. Thank you for your cooperation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="0" width="61" height="21" uuid="ec208322-4f09-428e-9dd5-88e399a28e37"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="264" y="77" width="100" height="20" uuid="65dacbee-7574-4a36-bf61-777f398d9ffb"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="453" y="57" width="100" height="20" uuid="d76c7730-ebe7-40e2-8bc9-2920d2226f02"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="1" width="62" height="20" uuid="1ae2afbd-cd47-481a-809b-c526c4bcfd90"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Sum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

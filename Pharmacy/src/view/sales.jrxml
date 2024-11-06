@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="084e29f0-669e-4b82-ad8d-67313ba1fb3f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select b.medicine, b.quantity, m.distributors, m.medicine_type
+from sales as b, medicine as m
+where b.medicine=m.name
+order by b.quantity desc;]]>
+	</queryString>
+	<field name="medicine" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="distributors" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="medicine_type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="93" y="0" width="381" height="67" uuid="df6a6c46-2841-47aa-9903-9e192db08ba3"/>
+				<textElement>
+					<font fontName="Academy Engraved LET" size="48" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daily Sales Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="124" y="0" width="315" height="41" uuid="9813dc63-4abb-4a13-9ac5-dbf31c295a1a"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Hemas hospitals PVT (LTD)]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="2" width="100" height="20" uuid="16820712-5e44-4b4c-965c-72d49a09395d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medicine ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="2" width="100" height="20" uuid="814a4848-5976-492b-9431-40a2b6ed0d47"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Distributors]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="299" y="2" width="112" height="20" uuid="ab02e34e-fdb2-447f-87a2-755189e08fea"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medicine type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="2" width="100" height="20" uuid="77c78193-bafd-4e97-b0ae-c0e718143696"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="0" width="100" height="20" uuid="2ec4f934-e957-4634-a3f6-be43b1a2b16c"/>
+				<textFieldExpression><![CDATA[$F{medicine}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="153" y="0" width="100" height="20" uuid="79b32803-a0de-443d-b569-72046d885993"/>
+				<textFieldExpression><![CDATA[$F{distributors}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="0" width="100" height="20" uuid="fa9ba1b5-66cd-4c3f-9bf4-e686221fef4e"/>
+				<textFieldExpression><![CDATA[$F{medicine_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="81" height="20" uuid="f0757964-2674-4e33-a0d7-2f8a4bba643c"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="30" width="555" height="1" uuid="48d311c4-0584-4b1d-ad83-fe4851e9eb78"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="9" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="58" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="455" y="25" width="100" height="20" uuid="3ac89845-3fa1-4bdb-917f-5ca2dab03130"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="13" y="0" width="44" height="45" uuid="003549e3-b502-407d-a52f-3bc5e3b4ae5f"/>
+				<imageExpression><![CDATA["/Users/chethanarowell/Downloads/Hemas-Logos-Depts.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="234" y="38" width="100" height="20" uuid="5e62ea40-d259-4211-9d07-fdb2f44c6bc4"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
